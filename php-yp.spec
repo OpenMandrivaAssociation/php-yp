@@ -5,7 +5,7 @@
 
 Summary:	NIS (yp) extension module for PHP
 Name:		php-%{modname}
-Version:	5.2.1
+Version:	5.2.2
 Release:	%mkrel 1
 Group:		Development/PHP
 URL:		http://www.php.net
