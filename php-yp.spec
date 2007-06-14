@@ -6,14 +6,12 @@
 Summary:	NIS (yp) extension module for PHP
 Name:		php-%{modname}
 Version:	5.2.3
-Release:	%mkrel 1
+Release:	%mkrel 2
 Group:		Development/PHP
 URL:		http://www.php.net
 License:	PHP License
 Source0:	yp.tar.bz2
 BuildRequires:	php-devel >= 3:5.2.0
-Provides:	php5-yp
-Obsoletes:	php5-yp
 BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 Epoch:		3
 
@@ -26,6 +24,15 @@ support.
 %setup -q -n yp
 
 %build
+export CFLAGS="%{optflags}"
+export CXXFLAGS="%{optflags}"
+export FFLAGS="%{optflags}"
+
+%if %mdkversion >= 200710
+export CFLAGS="$CFLAGS -fstack-protector"
+export CXXFLAGS="$CXXFLAGS -fstack-protector"
+export FFLAGS="$FFLAGS -fstack-protector"
+%endif
 
 phpize
 %configure2_5x --with-libdir=%{_lib} \
@@ -54,5 +61,3 @@ EOF
 %doc CREDITS package.xml
 %config(noreplace) %attr(0644,root,root) %{_sysconfdir}/php.d/%{inifile}
 %attr(0755,root,root) %{_libdir}/php/extensions/%{soname}
-
-
