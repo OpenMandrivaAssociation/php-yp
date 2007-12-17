@@ -12,7 +12,6 @@ URL:		http://www.php.net
 License:	PHP License
 Source0:	yp.tar.bz2
 BuildRequires:	php-devel >= 3:5.2.0
-BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 Epoch:		3
 
 %description
