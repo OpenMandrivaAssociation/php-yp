@@ -6,13 +6,13 @@
 Summary:	NIS (yp) extension module for PHP
 Name:		php-%{modname}
 Version:	5.2.3
-Release:	%mkrel 7
+Release:	%mkrel 8
 Group:		Development/PHP
 URL:		http://www.php.net
 License:	PHP License
 Source0:	yp.tar.bz2
 BuildRequires:	php-devel >= 3:5.2.0
-BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Epoch:		3
 
 %description
