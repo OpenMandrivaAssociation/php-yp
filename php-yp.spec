@@ -11,6 +11,7 @@ Group:		Development/PHP
 URL:		http://www.php.net
 License:	PHP License
 Source0:	yp.tar.bz2
+Patch0:		yp-php54x.diff
 BuildRequires:	php-devel >= 3:5.2.0
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Epoch:		3
@@ -22,6 +23,7 @@ support.
 %prep
 
 %setup -q -n yp
+%patch0 -p0
 
 %build
 %serverbuild
