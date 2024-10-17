@@ -8,7 +8,7 @@ Name:		php-%{modname}
 Version:	5.2.3
 Release:	29
 Group:		Development/PHP
-URL:		http://www.php.net
+URL:		https://www.php.net
 License:	PHP License
 Source0:	yp.tar.bz2
 Patch0:		yp-php54x.diff
